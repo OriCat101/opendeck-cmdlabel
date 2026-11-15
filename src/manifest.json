@@ -1,0 +1,33 @@
+{
+  "Name": "Command Label",
+  "Author": "ori",
+  "Description": "Show the output of a command as the key title or image",
+  "Version": "0.1.0",
+  "Icon": "icon",
+  "Category": "Command Label",
+  "CategoryIcon": "icon",
+  "CodePath": "start.sh",
+  "OS": [
+    {
+      "Platform": "linux",
+      "MinimumVersion": "1.0"
+    }
+  ],
+  "Software": {
+    "MinimumVersion": "5.0"
+  },
+  "Actions": [
+    {
+      "Name": "Command Label",
+      "UUID": "cat.ori.cmdlabel.label",
+      "Icon": "icon",
+      "Tooltip": "Set the title or image from a command, run another on press",
+      "Controllers": ["Keypad"],
+      "States": [
+        {
+          "Image": "icon"
+        }
+      ]
+    }
+  ]
+}
