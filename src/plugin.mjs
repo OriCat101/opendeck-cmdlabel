@@ -61,7 +61,9 @@ ws.addEventListener("message", ({ data }) => {
     case "keyDown": {
       const press = payload?.settings?.press;
       if (press) {
-        spawn("sh", ["-c", press], { detached: true, stdio: "ignore" }).unref();
+        const child = spawn("sh", ["-c", press], { detached: true, stdio: "ignore" });
+        child.on("exit", () => visible.has(context) && refresh(context));
+        child.unref();
       }
       break;
     }
